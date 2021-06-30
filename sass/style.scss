@@ -18,8 +18,8 @@ body
 header
 {
     position: fixed;
-    width:100%;
-    height:10vh;
+    width: 100%;
+    height: 10vh;
     flex-basis: 10vh;
     @include makeCenter();
     background-color: royalblue; // zmienia sie na transparent ( a raczej na początku jest)
@@ -27,7 +27,7 @@ header
 
 .hamburger
 {
-    display:none;
+    display: none;
 }
 
 .foto
@@ -42,12 +42,19 @@ header
     position: fixed;
     right: 0;
     top: 75%;
-    width:50px;
-    height:50px;
-    background-color:black;
-    font-size:30px;
+    transform: translateX(100%);
+    transition: .2s ease-in-out;
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    font-size: 30px;
     @include makeCenter();
     cursor: pointer;
+}
+
+.toUp.active
+{
+    transform: translateX(0);
 }
 
 .aboutMe
@@ -59,21 +66,21 @@ header
 
 .galery
 {
-    flex-basis:70vh;
+    flex-basis: 70vh;
     @include makeCenter();
     background-color: yellowgreen;
 }
 
 .contact
 {
-    flex-basis:50vh;
+    flex-basis: 50vh;
     @include makeCenter();
     background-color: red;
 }
 
 footer
 {
-    flex-basis:10vh;
+    flex-basis: 10vh;
     @include makeCenter();
     background-color: #222;
 }
@@ -82,14 +89,15 @@ footer
 {
     .hamburger 
     {
-        display:block;
+        display: block;
         position: absolute;
         font-size: 30px;
         right: 10vw;
+        cursor: pointer;
     }
 
     .toUp
     {
-        display:none;
+        display: none;
     }
 }
