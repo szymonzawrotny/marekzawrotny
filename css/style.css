@@ -19,9 +19,11 @@ body {
 }
 
 header {
+  z-index: 10;
   position: fixed;
   width: 100%;
   height: 10vh;
+  min-height: 80px;
   -ms-flex-preferred-size: 10vh;
       flex-basis: 10vh;
   display: -webkit-box;
@@ -33,7 +35,47 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-color: transparent;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+header .logo {
+  position: absolute;
+  left: 5vw;
+  font-size: 42px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+header .option {
+  position: absolute;
+  right: 10vw;
+}
+
+header.active {
   background-color: royalblue;
+}
+
+header .option ul {
+  text-transform: uppercase;
+  opacity: 0;
+  -webkit-transition: 0.5s ease-in;
+  transition: 0.5s ease-in;
+}
+
+header .option ul li {
+  margin: 10px;
+  font-size: 18px;
+}
+
+header .option ul.active {
+  opacity: 1;
+}
+
+header .option ul li {
+  display: inline;
+  cursor: pointer;
 }
 
 .hamburger {
@@ -41,18 +83,20 @@ header {
 }
 
 .foto {
-  -ms-flex-preferred-size: 100vh;
-      flex-basis: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: gray;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.foto img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 .toUp {
@@ -132,6 +176,7 @@ header {
 footer {
   -ms-flex-preferred-size: 10vh;
       flex-basis: 10vh;
+  min-height: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -142,9 +187,10 @@ footer {
       -ms-flex-pack: center;
           justify-content: center;
   background-color: #222;
+  font-size: 24px;
 }
 
-@media (max-width: 660px) {
+@media (max-width: 800px) {
   .hamburger {
     display: block;
     position: absolute;
@@ -154,6 +200,15 @@ footer {
   }
   .toUp {
     display: none;
+  }
+  header .logo {
+    font-size: 26px;
+  }
+  header .option {
+    display: none;
+  }
+  footer {
+    font-size: 16px;
   }
 }
 /*# sourceMappingURL=style.css.map */
