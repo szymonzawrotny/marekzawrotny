@@ -43,7 +43,7 @@ header
 
 header.active
 {
-    background-color:#e63946;
+    background-color:#000;
 }
 
 header .option ul
@@ -145,6 +145,7 @@ aside{
     font-size: 30px;
     @include makeCenter();
     cursor: pointer;
+    z-index: 15;
 }
 
 .toUp.active
@@ -155,21 +156,46 @@ aside{
 .aboutMe
 {
     flex-basis:70vh;
-    @include makeCenter();
+    position:relative;
     background-color: #f1faee;
+    color:#222;
 }
+
 
 .galery
 {
     flex-basis: 70vh;
-    @include makeCenter();
+    position:relative;
     background-color: #a8dadc;
+}
+
+.partText
+{
+    font-size:36px;
+    font-weight:700;
+    text-transform: capitalize;
+    position:absolute;
+    top:10%;
+    left:50%;
+    transform: translateX(-50%);
+}
+
+.partText span
+{
+    display:inline-block;
+    width:10px;
+    height:30px;
+    margin:0 4px;
+    background-color:darkred;
 }
 
 .contact
 {
-    flex-basis: 50vh;
-    @include makeCenter();
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    position:relative;
+    flex-basis: 60vh;
     background-color: #457b9d;
 }
 
@@ -179,24 +205,13 @@ footer
     min-height:50px;
     @include makeCenter();
     background-color: #1d3557;
-    font-size:24px;
+    font-size:18px;
     position:relative;
     overflow:hidden;
+    span{
+        //opacity: .6;
+    }
 }
-
-.line
-{
-    position:absolute;
-    right:-20px;
-    bottom:20px;
-    width:120px;
-    height:5px;
-    background-color:white;
-    transform:rotate(-40deg);
-    box-shadow: 10px 10px 0px white;
-}
-
-
 
 @media (max-width:860px)
 {
