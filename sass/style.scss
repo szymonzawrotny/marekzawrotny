@@ -171,23 +171,27 @@ aside{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    .first{
+    .galleryFoto{
         height:60vh;
         flex-basis:20%;
-        border:2px solid black;
+        border:1px solid black;
         margin:50px;
         overflow: hidden;
         cursor:pointer;
-        // position: relative;
-        // img{
-        //     position: absolute;
-        //     top: 50%;
-        //     left: 50%;
-        //     transform: translate(-50%,-50%);
-        //     height: auto;
-        //     min-width: 100%;
-        //     min-height: 100%;
-        // }
+        position: relative;
+        img{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            height: auto;
+            min-width: 100%;
+            min-height: 100%;
+        }
+    // .galleryFoto:hover
+    // {
+    //     transform: rotate(45deg);
+    // }
     }
 }
 
@@ -197,7 +201,7 @@ aside{
     font-weight:700;
     text-transform: capitalize;
     position:absolute;
-    top:8%;
+    top:5%;
     left:50%;
     transform: translateX(-50%);
 }
@@ -206,7 +210,7 @@ aside{
 {
     display:inline-block;
     width:10px;
-    height:30px;
+    height:25px;
     margin:0 4px;
     background-color:#495057;
 }
@@ -219,6 +223,33 @@ aside{
     position:relative;
     flex-basis: 60vh;
     background-color: #adb5bd;
+}
+
+.contact .partText
+{
+    font-size: 46px;
+    span{
+        height:30px;
+    }
+}
+
+.contact .contactText
+{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align:center;
+    font-size:36px;
+    font-weight: 700;
+    span{
+        color:#495057;
+    }
+    button{
+        padding:20px;
+        margin:20px;
+        cursor: pointer;
+    }
 }
 
 footer

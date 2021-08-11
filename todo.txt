@@ -2,9 +2,4 @@ slider
 kółka od slidera
 o mnie
 hover na zdjęciach w galeri
-kontakt
-odsyłacze w menu w mobilnej
-wysokość li w menu w mobilnej
 cała mobilna XD
-druga mobilna na przejścia zdjęć w gallery
-span przy partText duży i nachodzący na napis

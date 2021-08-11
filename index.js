@@ -30,27 +30,19 @@ window.addEventListener('scroll',()=> {
 
 // nawigacja i odsyłacze 
 
-const li1 = document.querySelector('li:nth-of-type(1)');
-const li2 = document.querySelector('li:nth-of-type(2)');
-const li3 = document.querySelector('li:nth-of-type(3)');
+const allLi = [...document.querySelectorAll('li')];
 
-li1.addEventListener('click',()=> {
-    $('body, html').animate({
-        scrollTop: foto.clientHeight- header.clientHeight
-    });
-});
+allLi.forEach((one)=> {
+    one.addEventListener('click', function() {
 
-li2.addEventListener('click',()=> {
-    $('body, html').animate({
-        scrollTop: foto.clientHeight + aboutMe.clientHeight - header.clientHeight
-    });
-});
-
-li3.addEventListener('click',()=> {
-    $('body, html').animate({
-        scrollTop: foto.clientHeight + aboutMe.clientHeight + galery.clientHeight
-    });
-});
+        const goToSection = '#' + $(this).attr('class');
+        $('body, html').animate({
+            scrollTop: $(goToSection).offset().top - header.clientHeight
+        });
+        hamburger.classList.remove('active');
+        aside.classList.remove('active');
+    })
+})
 
 //hamburger menu 
 

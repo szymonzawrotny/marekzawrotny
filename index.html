@@ -21,9 +21,9 @@
         <div class="logo">marek zawrotny</div>
         <div class="option">
             <ul>
-                <li>o mnie</li>
-                <li>galeria</li>
-                <li>kontakt</li>
+                <li class="first">o mnie</li>
+                <li class="second">galeria</li>
+                <li class="third">kontakt</li>
                 <li>
                     <a href="https://www.facebook.com/MarekZawrotnyFotograf/" target="_blank"><i class="fab fa-facebook-f"></i></a>
                 </li>
@@ -35,9 +35,9 @@
         </div>
         <aside>
             <ul>
-                <li>o mnie</li>
-                <li>galeria</li>
-                <li>kontakt</li>
+                <li class="first">o mnie</li>
+                <li class="second">galeria</li>
+                <li class="third">kontakt</li>
                 <li>
                     <a href="https://www.facebook.com/MarekZawrotnyFotograf/" target="_blank"><i class="fab fa-facebook-f"></i></a>
                 </li>
@@ -53,27 +53,31 @@
         <i class="fas fa-chevron-up"></i>
     </div>
 
-    <div class="aboutMe">
+    <div class="aboutMe" id="first">
         <div class="partText"><span></span>o mnie</div>
     </div>
 
-    <div class="galery">
+    <div class="galery" id="second">
         <div class="partText"><span></span>galeria</div>
 
-        <div class="first"><img src="css/foto/g_1.jpg"/></div>
-        <div class="first"><img src="css/foto/g_2.jpg"/></div>
-        <div class="first"><img src="css/foto/g_3.jpg"/></div>
-        <div class="first"><img src="css/foto/g_4.jpg"/></div>
-        <div class="first"><img src="css/foto/g_5.jpg"/></div>
+        <div class="galleryFoto"><img src="css/foto/g_1.jpg"/></div>
+        <div class="galleryFoto"><img src="css/foto/g_2.jpg"/></div>
+        <div class="galleryFoto"><img src="css/foto/g_3.jpg"/></div>
+        <div class="galleryFoto"><img src="css/foto/g_4.jpg"/></div>
+        <div class="galleryFoto"><img src="css/foto/g_5.jpg"/></div>
     </div>
 
-    <div class="contact">
+    <div class="contact" id="third">
         <div class="partText"><span></span>kontakt</div>
+        <div class="contactText">
+            <span>Adres email:</span> marekzawrotny@wp.pl</br>
+            <span>Telefon:</span> 512 122 141</br>
+            <button>napisz!</button>
+        </div>
     </div>
 
     <footer>
         <span>Created by Szymon Zawrotny | All rights reserved ©</span>
-        <!-- <div class="line"></div> -->
     </footer>
 
     <script src="lib/jquery.min.js"></script>
