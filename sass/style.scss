@@ -128,6 +128,7 @@ aside{
         height: auto;
         min-width: 100%;
         min-height: 100%;
+        animation: appear .8s linear 7.2s reverse, appear .8s linear;
     }
 }
 
@@ -177,8 +178,12 @@ aside{
         border:1px solid black;
         margin:50px;
         overflow: hidden;
-        cursor:pointer;
+        //cursor:pointer;
         position: relative;
+        &:hover{
+            cursor: pointer;  //tu do galeri hover
+            
+        }
         img{
             position: absolute;
             top: 50%;
@@ -188,10 +193,6 @@ aside{
             min-width: 100%;
             min-height: 100%;
         }
-    // .galleryFoto:hover
-    // {
-    //     transform: rotate(45deg);
-    // }
     }
 }
 
@@ -235,6 +236,7 @@ aside{
 
 .contact .contactText
 {
+    width:100%;
     position:absolute;
     top:50%;
     left:50%;
@@ -246,9 +248,22 @@ aside{
         color:#495057;
     }
     button{
-        padding:20px;
-        margin:20px;
+        //padding:15px;
+        height:60px;
+        width:140px;
+        margin:40px;
         cursor: pointer;
+        background-color: white;
+        border: 4px solid #495057;
+        text-transform: uppercase;
+        color:#495057;
+        font-weight:700;
+        font-size:22px;
+        animation: shakeThisBaby 10s ease-in-out infinite;
+    }
+    button:hover
+    {
+        animation-play-state: paused;
     }
 }
 
@@ -326,5 +341,85 @@ footer
     aside.active
     {
         transform: translateY(0);
+    }
+
+    .contact .contactText
+    {
+        font-size:26px;
+    }
+
+    .contact .partText
+    {
+        font-size: 32px;
+        span{
+            height:20px;
+        }
+    }
+}
+
+@keyframes shakeThisBaby
+{
+    0%
+    {
+        transform: translateX(0);
+    }
+
+    89%
+    {
+        transform: translateX(0);
+    }
+    90%
+    {
+        transform: translateX(-15px);
+    }
+    91%
+    {
+        transform: translateX(15px);
+    }
+    92%
+    {
+        transform: translateX(-15px);
+    }
+    93%
+    {
+        transform: translateX(15px);
+    }
+    94%
+    {
+        transform: translateX(-15px);
+    }
+    95%
+    {
+        transform: translateX(15px);
+    }
+    96%
+    {
+        transform: translateX(-15px);
+    }
+    97%
+    {
+        transform: translateX(15px);
+    }
+    98%
+    {
+        transform: translateX(-15px);
+    }
+    99%
+    {
+        transform: translateX(15px);
+    }
+    100%
+    {
+        transform: translateX(0);
+    }
+}
+
+@keyframes appear
+{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
     }
 }

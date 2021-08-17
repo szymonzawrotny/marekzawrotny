@@ -54,3 +54,19 @@ hamburger.addEventListener('click',()=> {
     hamburger.classList.toggle('active');
     aside.classList.toggle('active');
 });
+
+//slider
+
+let i = 0;
+const fotos = ['slide.jpg','slide2.jpg','slide3.jpg','slide5.jpg'];
+
+const changeFoto = function() {
+
+    if(i>fotos.length-1)
+        i=0;
+
+    foto.innerHTML = `<img src="css/foto/${fotos[i]}">`;
+    i++;
+}
+
+setInterval(changeFoto,8000);
