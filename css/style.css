@@ -641,6 +641,19 @@ footer span {
   .contact .partText span {
     height: 20px;
   }
+  .firstElement, .secondElement {
+    width: 85%;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1226px) {
+  .firstElement, .secondElement {
+    height: 40vh;
+  }
+  .secondElement {
+    bottom: 10%;
+  }
 }
 
 @media (max-height: 400px) {
