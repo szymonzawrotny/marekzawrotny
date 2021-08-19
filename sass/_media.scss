@@ -1,0 +1,84 @@
+@media (max-width:860px)
+{
+    .hamburger 
+    {
+        display: block;
+        position: absolute;
+        font-size: 30px;
+        right: 10vw;
+        cursor: pointer;
+    }
+
+    header .logo
+    {
+        font-size:26px;
+    }
+
+    header .option
+    {
+        display:none;
+    }
+
+    footer
+    {
+        font-size:16px;
+    }
+
+    aside
+    {
+        position:fixed;
+        @include makeCenter();
+        flex-direction: column;
+        //flex-basis:10%;
+        top:0;
+        left:0;
+        right:0;
+        height:35vh;
+        background-color:black;
+        transform:translateY(-35vh);
+        transition: 0.5s ease-in-out;
+        text-align:center;
+        ul{
+            display: block;
+            width: 100%;
+            margin-top: 12%;
+            li{
+                display: block;
+                list-style-type: none;
+                cursor: pointer;
+                margin: 10px;
+                font-size: 18px;
+                transition: 0.2s ease-in-out;
+                width: 100%;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    aside.active
+    {
+        transform: translateY(0);
+    }
+
+    .contact .contactText
+    {
+        font-size:26px;
+    }
+
+    .contact .partText
+    {
+        font-size: 32px;
+        span{
+            height:20px;
+        }
+    }
+}
+
+@media (max-height:400px)
+{
+    aside
+    {
+        height:40vh;
+        transform:translateY(-40vh);
+    }
+}

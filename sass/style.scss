@@ -1,4 +1,5 @@
 @import "_functions.scss";
+@import "_animations.scss";
 
 *{
     margin: 0px;
@@ -156,16 +157,95 @@ aside{
 
 .aboutMe
 {
-    flex-basis:90vh;
+    flex-basis:150vh;
     position:relative;
     background-color: #f8f9fa;
-    color:#222;
+    color:#495057;
+}
+
+
+.firstElement
+{
+    //border: 2px solid black;
+    width:50%;
+    height:20vh;
+    position:absolute;
+    top:20%;
+    margin:50px;
+    display:inline-block;
+}
+
+.thick
+{
+    position:absolute;
+    top:0%;
+    left:0%;
+    width:40px;
+    height:40px;
+    background-color:#495057;
+}
+
+.white
+{
+    position:absolute;
+    top:5px;
+    left:5px;
+    width:40px;
+    height:40px;
+    border-top:10px solid #f8f9fa;
+    border-left:10px solid #f8f9fa;
+    border-right:5px solid #f8f9fa;
+    border-bottom:5px solid #f8f9fa;
+    background-color: darkred;
+}
+
+.firstElementText
+{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:80%;
+    font-weight:700;
+}
+
+.close
+{
+    position:absolute;
+    right:0%;
+    bottom:0%;
+    width:40px;
+    height:40px;
+    background-color:#495057;
+}
+
+.close2
+{
+    position:absolute;
+    right:5px;
+    bottom:5px;
+    width:40px;
+    height:40px;
+    background-color: #f8f9fa;
+}
+
+
+.secondElement
+{
+    width:50%;
+    height:20vh;
+    position:absolute;
+    bottom:20%;
+    right:0%;
+    margin:50px;
+    display:inline-block;
 }
 
 
 .galery
 {
     flex-basis: 90vh;
+    min-height:800px;
     position:relative;
     background-color: #dee2e6;
     display:flex;
@@ -175,15 +255,10 @@ aside{
     .galleryFoto{
         height:60vh;
         flex-basis:20%;
-        border:1px solid black;
         margin:50px;
         overflow: hidden;
-        //cursor:pointer;
+        cursor:pointer;
         position: relative;
-        &:hover{
-            cursor: pointer;  //tu do galeri hover
-            
-        }
         img{
             position: absolute;
             top: 50%;
@@ -193,7 +268,46 @@ aside{
             min-width: 100%;
             min-height: 100%;
         }
+        span.krajobraz,span.makro,span.przyroda,span.szczytno,span.ślub
+        {
+            position: absolute;
+            bottom:0%;
+            width:100%;
+            height:7vh;
+            background-color:black;
+            text-transform: capitalize;
+            opacity:.8;
+            transition: .3s ease-in-out;
+            transform:translateY(7vh);
+            @include makeCenter();
+        }
+        
     }
+}
+
+#firstGalleryFoto:hover span.krajobraz
+{
+    transform:translateY(0);
+}
+
+#secondGalleryFoto:hover span.makro
+{
+    transform:translateY(0);
+}
+
+#firstGalleryFoto:hover span.przyroda
+{
+    transform:translateY(0);
+}
+
+#firstGalleryFoto:hover span.szczytno
+{
+    transform:translateY(0);
+}
+
+#firstGalleryFoto:hover span.ślub
+{
+    transform:translateY(0);
 }
 
 .partText
@@ -213,7 +327,7 @@ aside{
     width:10px;
     height:25px;
     margin:0 4px;
-    background-color:#495057;
+    background-color:darkred;
 }
 
 .contact
@@ -282,154 +396,4 @@ footer
     }
 }
 
-@media (max-width:860px)
-{
-    .hamburger 
-    {
-        display: block;
-        position: absolute;
-        font-size: 30px;
-        right: 10vw;
-        cursor: pointer;
-    }
-
-    header .logo
-    {
-        font-size:26px;
-    }
-
-    header .option
-    {
-        display:none;
-    }
-
-    footer
-    {
-        font-size:16px;
-    }
-
-    aside
-    {
-        position:fixed;
-        @include makeCenter();
-        flex-direction: column;
-        //flex-basis:10%;
-        top:0;
-        left:0;
-        right:0;
-        height:35vh;
-        background-color:black;
-        transform:translateY(-35vh);
-        transition: 0.5s ease-in-out;
-        text-align:center;
-        ul{
-            display: block;
-            width: 100%;
-            margin-top: 12%;
-            li{
-                display: block;
-                list-style-type: none;
-                cursor: pointer;
-                margin: 10px;
-                font-size: 18px;
-                transition: 0.2s ease-in-out;
-                width: 100%;
-                text-transform: uppercase;
-            }
-        }
-    }
-
-    aside.active
-    {
-        transform: translateY(0);
-    }
-
-    .contact .contactText
-    {
-        font-size:26px;
-    }
-
-    .contact .partText
-    {
-        font-size: 32px;
-        span{
-            height:20px;
-        }
-    }
-}
-
-@media (max-height:400px)
-{
-    aside
-    {
-        height:40vh;
-        transform:translateY(-40vh);
-    }
-}
-
-@keyframes shakeThisBaby
-{
-    0%
-    {
-        transform: translateX(0);
-    }
-
-    89%
-    {
-        transform: translateX(0);
-    }
-    90%
-    {
-        transform: translateX(-15px);
-    }
-    91%
-    {
-        transform: translateX(15px);
-    }
-    92%
-    {
-        transform: translateX(-15px);
-    }
-    93%
-    {
-        transform: translateX(15px);
-    }
-    94%
-    {
-        transform: translateX(-15px);
-    }
-    95%
-    {
-        transform: translateX(15px);
-    }
-    96%
-    {
-        transform: translateX(-15px);
-    }
-    97%
-    {
-        transform: translateX(15px);
-    }
-    98%
-    {
-        transform: translateX(-15px);
-    }
-    99%
-    {
-        transform: translateX(15px);
-    }
-    100%
-    {
-        transform: translateX(0);
-    }
-}
-
-@keyframes appear
-{
-    0%{
-        opacity:0;
-    }
-    100%{
-        opacity:1;
-    }
-}
+@import "_media.scss";
