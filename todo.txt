@@ -1,8 +1,6 @@
-slider
 kółka od slidera
 o mnie
 hover na zdjęciach w galerii
 cała galeriaXD
 mobilna do galerii
-mailto do buttona
 

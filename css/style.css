@@ -256,6 +256,7 @@ aside {
   position: relative;
   -ms-flex-preferred-size: 60vh;
       flex-basis: 60vh;
+  min-height: 400px;
   background-color: #adb5bd;
 }
 
@@ -358,8 +359,6 @@ footer span {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -ms-flex-preferred-size: 10%;
-        flex-basis: 10%;
     top: 0;
     left: 0;
     right: 0;
@@ -374,7 +373,7 @@ footer span {
   aside ul {
     display: block;
     width: 100%;
-    margin-top: 15%;
+    margin-top: 12%;
   }
   aside ul li {
     display: block;
@@ -399,6 +398,14 @@ footer span {
   }
   .contact .partText span {
     height: 20px;
+  }
+}
+
+@media (max-height: 400px) {
+  aside {
+    height: 40vh;
+    -webkit-transform: translateY(-40vh);
+            transform: translateY(-40vh);
   }
 }
 
