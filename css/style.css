@@ -432,22 +432,13 @@ aside {
   background-color: #f8f9fa;
 }
 
-.secondElement {
-  width: 50%;
-  height: 20vh;
-  position: absolute;
-  bottom: 20%;
-  right: 0%;
-  margin: 50px;
-  display: inline-block;
-}
-
 .galery {
   -ms-flex-preferred-size: 90vh;
       flex-basis: 90vh;
   min-height: 800px;
   position: relative;
-  background-color: #dee2e6;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f8f9fa), color-stop(#242424), to(#adb5bd));
+  background-image: linear-gradient(#f8f9fa, #242424, #adb5bd);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -759,13 +750,13 @@ footer .footerTriangle {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -ms-flex-preferred-size: 100vh;
-        flex-basis: 100vh;
+    -ms-flex-preferred-size: 130vh;
+        flex-basis: 130vh;
   }
   .galery .galleryFoto {
-    -ms-flex-preferred-size: 15vh;
-        flex-basis: 15vh;
-    width: 80%;
+    -ms-flex-preferred-size: 20vh;
+        flex-basis: 20vh;
+    width: 90%;
   }
 }
 

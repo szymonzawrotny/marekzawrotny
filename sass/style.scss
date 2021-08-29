@@ -286,25 +286,13 @@ aside{
     background-color: #f8f9fa;
 }
 
-
-.secondElement
-{
-    width:50%;
-    height:20vh;
-    position:absolute;
-    bottom:20%;
-    right:0%;
-    margin:50px;
-    display:inline-block;
-}
-
-
 .galery
 {
     flex-basis: 90vh;
     min-height:800px;
     position:relative;
-    background-color: #dee2e6;
+    // background-color: #dee2e6;
+    background-image: linear-gradient(#f8f9fa,rgb(36, 36, 36),#adb5bd);
     display:flex;
     flex-direction: row;
     justify-content: center;
