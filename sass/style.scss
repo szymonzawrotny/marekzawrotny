@@ -116,22 +116,79 @@ aside{
     z-index:2;
 }
 
-.foto
+.slider
 {
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
-    img{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        height: auto;
-        min-width: 100%;
-        min-height: 100%;
-        animation: appear .8s linear 7.2s reverse, appear .8s linear;
+    .foto
+    {
+        height: 100vh;
+        overflow: hidden;
+        position: relative;
+        img{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            height: auto;
+            min-width: 100%;
+            min-height: 100%;
+            animation: appear .8s linear 7.2s reverse, appear .8s linear;
+        }
     }
+    .ringBox
+    {
+        position: absolute;
+        bottom:5%;
+        left:50%;
+        transform: translateX(-50%);
+        width:200px;
+        height:50px;
+        display:flex;
+        justify-content:space-around;
+        align-items: center;
+        .oneRing
+        {
+            height:20px;
+            width:20px;
+            border-radius:50%;
+            background-color:white;
+            box-shadow:0px 0px 5px white;
+            transition: .8s linear;
+            opacity:.6;
+        }
+
+        .oneRing.active
+        {
+            background-color: darkred;
+        }
+    }
+    .arrowRight,.arrowLeft
+    {
+        position:absolute;
+        top:50%;
+        right:0;
+        transform:translateY(-50%);
+        width:80px;
+        height:180px;
+        background-color:black;
+        opacity:.4;
+        @include makeCenter;
+        font-size:58px;
+        cursor:pointer;
+        transition: .2s ease-in-out;
+    }
+    .arrowLeft
+    {
+        left:0;
+    }
+
+    .arrowLeft:hover, .arrowRight:hover
+    {
+        opacity:0.8;
+    }
+
+
 }
+
 
 .toUp
 {
@@ -283,6 +340,17 @@ aside{
         }
         
     }
+    .galleryTriangle
+    {
+        position:absolute;
+        width:0;
+        height:0;
+        bottom:0;
+        right:10%;
+        border-left:30px solid transparent;
+        border-right:30px solid transparent;
+        border-bottom:30px solid #adb5bd;
+    }
 }
 
 #firstGalleryFoto:hover span.krajobraz
@@ -394,6 +462,34 @@ footer
     span{
         opacity: .6;
     }
+    .footerTriangle
+    {
+        position:absolute;
+        top:0;
+        left:10%;
+        width: 0; 
+        height: 0; 
+        border-left: 30px solid transparent;
+        border-right: 30px solid transparent;
+        border-top: 30px solid #adb5bd;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+::-webkit-scrollbar-thumb:hover
+{
+    background-color:#555;
 }
 
 @import "_media.scss";

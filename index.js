@@ -57,16 +57,71 @@ hamburger.addEventListener('click',()=> {
 
 //slider
 
+const allRings = [...document.querySelectorAll('.oneRing')];
+const arrowLeft = document.querySelector('.arrowLeft');
+const arrowRight = document.querySelector('.arrowRight');
+
 let i = 0;
-const fotos = ['slide.jpg','slide2.jpg','slide3.jpg','slide5.jpg'];
+const fotos = ['slide1.jpg','slide2.jpg','slide3.jpg','slide4.jpg','slide5.jpg'];
 
 const changeFoto = function() {
 
-    if(i>fotos.length-1)
-        i=0;
-
-    foto.innerHTML = `<img src="css/foto/${fotos[i]}">`;
     i++;
+    if(i===fotos.length)
+    {
+        i=0;
+    }
+    
+    allRings.forEach((oneRing)=>{
+        oneRing.classList.remove('active');
+    })
+    allRings[i].classList.add('active');
+    foto.innerHTML = `<img src="css/foto/${fotos[i]}">`;
 }
 
-setInterval(changeFoto,8000);
+let interval = setInterval(changeFoto,8000);
+
+const slideFoto = function()
+{
+    if(this.className==="arrowLeft")
+    {
+        i--;
+        if(i===fotos.length)
+        {
+            i=0;
+        }
+        else if(i<0)
+        {
+            i=fotos.length-1;
+        }
+        foto.innerHTML = `<img src="css/foto/${fotos[i]}">`;
+        allRings.forEach((oneRing)=>{
+            oneRing.classList.remove('active');
+        })
+        allRings[i].classList.add('active');
+        clearInterval(interval);
+        interval = setInterval(changeFoto,8000);
+    }
+    else if(this.className==="arrowRight")
+    {
+        i++;
+        if(i===fotos.length)
+        {
+            i=0;
+        }
+        else if(i<0)
+        {
+            i=fotos.length-1;
+        }
+        foto.innerHTML = `<img src="css/foto/${fotos[i]}">`;
+        allRings.forEach((oneRing)=>{
+            oneRing.classList.remove('active');
+        })
+        allRings[i].classList.add('active');
+        clearInterval(interval);
+        interval = setInterval(changeFoto,8000);
+    }
+}
+
+arrowLeft.addEventListener('click',slideFoto);
+arrowRight.addEventListener('click',slideFoto);
