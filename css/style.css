@@ -292,8 +292,8 @@ aside {
   background-color: white;
   -webkit-box-shadow: 0px 0px 5px white;
           box-shadow: 0px 0px 5px white;
-  -webkit-transition: .8s linear;
-  transition: .8s linear;
+  -webkit-transition: .6s linear;
+  transition: .6s linear;
   opacity: .6;
 }
 
@@ -464,10 +464,10 @@ aside {
 }
 
 .galery .galleryFoto {
-  height: 60vh;
+  height: 70vh;
   -ms-flex-preferred-size: 20%;
       flex-basis: 20%;
-  margin: 50px;
+  margin: 10px;
   overflow: hidden;
   cursor: pointer;
   position: relative;
@@ -516,6 +516,10 @@ aside {
   border-left: 30px solid transparent;
   border-right: 30px solid transparent;
   border-bottom: 30px solid #adb5bd;
+}
+
+.galery .partText {
+  top: 3%;
 }
 
 #firstGalleryFoto:hover span.krajobraz {
@@ -710,7 +714,7 @@ footer .footerTriangle {
     left: 0;
     right: 0;
     height: 35vh;
-    background-color: black;
+    background-color: #212529;
     -webkit-transform: translateY(-35vh);
             transform: translateY(-35vh);
     -webkit-transition: 0.5s ease-in-out;
@@ -749,6 +753,19 @@ footer .footerTriangle {
   .firstElement, .secondElement {
     width: 85%;
     font-size: 16px;
+  }
+  .galery {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-preferred-size: 100vh;
+        flex-basis: 100vh;
+  }
+  .galery .galleryFoto {
+    -ms-flex-preferred-size: 15vh;
+        flex-basis: 15vh;
+    width: 80%;
   }
 }
 

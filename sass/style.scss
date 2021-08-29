@@ -152,7 +152,7 @@ aside{
             border-radius:50%;
             background-color:white;
             box-shadow:0px 0px 5px white;
-            transition: .8s linear;
+            transition: .6s linear;
             opacity:.6;
         }
 
@@ -310,9 +310,9 @@ aside{
     justify-content: center;
     align-items: center;
     .galleryFoto{
-        height:60vh;
+        height:70vh;
         flex-basis:20%;
-        margin:50px;
+        margin:10px;
         overflow: hidden;
         cursor:pointer;
         position: relative;
@@ -338,7 +338,6 @@ aside{
             transform:translateY(7vh);
             @include makeCenter();
         }
-        
     }
     .galleryTriangle
     {
@@ -350,6 +349,10 @@ aside{
         border-left:30px solid transparent;
         border-right:30px solid transparent;
         border-bottom:30px solid #adb5bd;
+    }
+    .partText
+    {
+        top:3%;
     }
 }
 
