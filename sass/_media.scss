@@ -19,11 +19,6 @@
         display:none;
     }
 
-    footer
-    {
-        font-size:16px;
-    }
-
     aside
     {
         position:fixed;
@@ -60,6 +55,15 @@
         transform: translateY(0);
     }
 
+    .slider
+    {
+        .arrowRight,.arrowLeft{
+            width:60px;
+            height:140px;
+            font-size:46px;
+        }
+    }
+
     .contact .contactText
     {
         font-size:26px;
@@ -73,9 +77,9 @@
         }
     }
 
-    .firstElement, .secondElement
+    .aboutMe .firstElement
     {
-        width:85%;
+        width:100%;
         font-size:16px;
     }
 
@@ -89,18 +93,33 @@
             width:90%;
         }
     }
+
+    footer
+    {
+        font-size:13px;
+    }
 }
 
-@media (max-width:1226px)
+@media (max-width:1400px)
 {
-    .firstElement, .secondElement
+    .aboutMe .secondsElement, .aboutMe .thirdElement
     {
+        width:35%;
         height:40vh;
     }
+}
 
-    .secondElement
+@media (max-width:1240px)
+{
+    .aboutMe .firstElement, .aboutMe .secondsElement, .aboutMe .thirdElement
     {
-        bottom:10%;
+        height:40vh;
+        width:85%;
+    }
+
+    .aboutMe .firstFoto, .aboutMe .secondsFoto, .aboutMe .thirdFoto
+    {
+        display:none;
     }
 }
 

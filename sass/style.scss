@@ -1,5 +1,6 @@
 @import "_functions.scss";
 @import "_animations.scss";
+@import "_variable.scss";
 
 *{
     margin: 0px;
@@ -44,7 +45,7 @@ header
 
 header.active
 {
-    background-color:#212529;
+    background-color: $header;
 }
 
 header .option ul
@@ -63,7 +64,7 @@ header .option ul li
 
 header .option ul li:hover
 {
-    color:#fca311;
+    color: $activeLi;
 }
 
 
@@ -158,7 +159,7 @@ aside{
 
         .oneRing.active
         {
-            background-color: darkred;
+            background-color: $activeRing;
         }
     }
     .arrowRight,.arrowLeft
@@ -185,10 +186,7 @@ aside{
     {
         opacity:0.8;
     }
-
-
 }
-
 
 .toUp
 {
@@ -214,76 +212,267 @@ aside{
 
 .aboutMe
 {
-    flex-basis:150vh;
+    flex-basis:230vh;
+    min-height: 2000px;
     position:relative;
-    background-color: #f8f9fa;
+    background-color: $aboutMe;
     color:#495057;
-}
+    .firstElement
+    {
+        //border: 2px solid black;
+        width:50%;
+        height:20vh;
+        position:absolute;
+        top:20%;
+        margin:50px;
+        display:inline-block;
+        .thick
+        {
+            position:absolute;
+            top:0%;
+            left:0%;
+            width:40px;
+            height:40px;
+            background-color:#495057;
+        }
+        .white
+        {
+            position:absolute;
+            top:5px;
+            left:5px;
+            width:40px;
+            height:40px;
+            border-top:10px solid #f8f9fa;
+            border-left:10px solid #f8f9fa;
+            border-right:5px solid #f8f9fa;
+            border-bottom:5px solid #f8f9fa;
+            background-color: darkred;
+        }
 
+        .firstElementText
+        {
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+            width:80%;
+            font-weight:700;
+            text-align: center;
+        }
 
-.firstElement
-{
-    //border: 2px solid black;
-    width:50%;
-    height:20vh;
-    position:absolute;
-    top:20%;
-    margin:50px;
-    display:inline-block;
-}
+        .close
+        {
+            position:absolute;
+            right:0%;
+            bottom:0%;
+            width:40px;
+            height:40px;
+            background-color:#495057;
+        }
 
-.thick
-{
-    position:absolute;
-    top:0%;
-    left:0%;
-    width:40px;
-    height:40px;
-    background-color:#495057;
-}
+        .close2
+        {
+            position:absolute;
+            right:5px;
+            bottom:5px;
+            width:40px;
+            height:40px;
+            background-color: #f8f9fa;
+        }
+    }
+    .firstFoto
+    {
+        position:absolute;
+        right:11%;
+        top:10%;
+        //border:2px solid black;
+        width:400px;
+        height:600px;
+        overflow: hidden;
+        transition: 0.5s ease-in-out;
+        box-shadow: 10px 10px 0 rgba(53, 52, 52, 0.747);
+        img{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            height: auto;
+            min-width: 100%;
+            min-height: 100%;
+        }
+    }
 
-.white
-{
-    position:absolute;
-    top:5px;
-    left:5px;
-    width:40px;
-    height:40px;
-    border-top:10px solid #f8f9fa;
-    border-left:10px solid #f8f9fa;
-    border-right:5px solid #f8f9fa;
-    border-bottom:5px solid #f8f9fa;
-    background-color: darkred;
-}
+    .secondsFoto
+    {
+        position:absolute;
+        left:11%;
+        top:50%;
+        //border:2px solid black;
+        width:600px;
+        height:400px;
+        overflow: hidden;
+        transition: 0.5s ease-in-out;
+        box-shadow: -10px 10px 0 rgba(53, 52, 52, 0.747);
+        img{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            height: auto;
+            min-width: 100%;
+            min-height: 100%;
+        }
+    }
 
-.firstElementText
-{
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    width:80%;
-    font-weight:700;
-}
+    .secondsElement
+    {
+        width:40%;
+        height:30vh;
+        position:absolute;
+        top:50%;
+        right:0%;
+        margin:50px;
+        display:inline-block;
+        //border:2px solid black;
+        .thick
+        {
+            position:absolute;
+            top:0%;
+            right:0%;
+            width:40px;
+            height:40px;
+            background-color:#495057;
+        }
+        .white
+        {
+            position:absolute;
+            top:5px;
+            right:5px;
+            width:40px;
+            height:40px;
+            border-top:10px solid #f8f9fa;
+            border-right:10px solid #f8f9fa;
+            border-left:5px solid #f8f9fa;
+            border-bottom:5px solid #f8f9fa;
+            background-color: darkred;
+        }
 
-.close
-{
-    position:absolute;
-    right:0%;
-    bottom:0%;
-    width:40px;
-    height:40px;
-    background-color:#495057;
-}
+        .firstElementText
+        {
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+            width:80%;
+            font-weight:700;
+            text-align: center;
+        }
 
-.close2
-{
-    position:absolute;
-    right:5px;
-    bottom:5px;
-    width:40px;
-    height:40px;
-    background-color: #f8f9fa;
+        .close
+        {
+            position:absolute;
+            left:0%;
+            bottom:0%;
+            width:40px;
+            height:40px;
+            background-color:#495057;
+        }
+
+        .close2
+        {
+            position:absolute;
+            left:5px;
+            bottom:5px;
+            width:40px;
+            height:40px;
+            background-color: #f8f9fa;
+        }
+    }
+
+    .thirdElement
+    {
+        width:40%;
+        height:20vh;
+        position:absolute;
+        top:82%;
+        left:0%;
+        margin:50px;
+        display:inline-block;
+        //border:2px solid black;
+        .thick
+        {
+            position:absolute;
+            top:0%;
+            left:0%;
+            width:40px;
+            height:40px;
+            background-color:#495057;
+        }
+        .white
+        {
+            position:absolute;
+            top:5px;
+            left:5px;
+            width:40px;
+            height:40px;
+            border-top:10px solid #f8f9fa;
+            border-left:10px solid #f8f9fa;
+            border-right:5px solid #f8f9fa;
+            border-bottom:5px solid #f8f9fa;
+            background-color: darkred;
+        }
+
+        .firstElementText
+        {
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+            width:80%;
+            font-weight:700;
+            text-align: center;
+        }
+
+        .close
+        {
+            position:absolute;
+            right:0%;
+            bottom:0%;
+            width:40px;
+            height:40px;
+            background-color:#495057;
+        }
+
+        .close2
+        {
+            position:absolute;
+            right:5px;
+            bottom:5px;
+            width:40px;
+            height:40px;
+            background-color: #f8f9fa;
+        }
+    }
+    .thirdFoto
+    {
+        position:absolute;
+        right:11%;
+        top:80%;
+        width:600px;
+        height:400px;
+        overflow: hidden;
+        transition: 0.5s ease-in-out;
+        box-shadow: 10px 10px 0 rgba(53, 52, 52, 0.747);
+        img{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            height: auto;
+            min-width: 100%;
+            min-height: 100%;
+        }
+    }
 }
 
 .galery
@@ -292,7 +481,7 @@ aside{
     min-height:800px;
     position:relative;
     // background-color: #dee2e6;
-    background-image: linear-gradient(#f8f9fa,rgb(36, 36, 36),#adb5bd);
+    background-image: $gallery;
     display:flex;
     flex-direction: row;
     justify-content: center;
@@ -326,17 +515,6 @@ aside{
             transform:translateY(7vh);
             @include makeCenter();
         }
-    }
-    .galleryTriangle
-    {
-        position:absolute;
-        width:0;
-        height:0;
-        bottom:0;
-        right:10%;
-        border-left:30px solid transparent;
-        border-right:30px solid transparent;
-        border-bottom:30px solid #adb5bd;
     }
     .partText
     {
@@ -386,7 +564,7 @@ aside{
     width:10px;
     height:25px;
     margin:0 4px;
-    background-color:darkred;
+    background-color: $partTextSpan;
 }
 
 .contact
@@ -397,7 +575,7 @@ aside{
     position:relative;
     flex-basis: 60vh;
     min-height:400px;
-    background-color: #adb5bd;
+    background-color: $contact;
 }
 
 .contact .partText
@@ -446,7 +624,7 @@ footer
     flex-basis: 10vh;
     min-height:50px;
     @include makeCenter();
-    background-color: #212529;
+    background-color: $footer;
     font-size:18px;
     position:relative;
     overflow:hidden;

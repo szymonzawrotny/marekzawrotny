@@ -366,14 +366,15 @@ aside {
 }
 
 .aboutMe {
-  -ms-flex-preferred-size: 150vh;
-      flex-basis: 150vh;
+  -ms-flex-preferred-size: 230vh;
+      flex-basis: 230vh;
+  min-height: 2000px;
   position: relative;
   background-color: #f8f9fa;
   color: #495057;
 }
 
-.firstElement {
+.aboutMe .firstElement {
   width: 50%;
   height: 20vh;
   position: absolute;
@@ -382,7 +383,7 @@ aside {
   display: inline-block;
 }
 
-.thick {
+.aboutMe .firstElement .thick {
   position: absolute;
   top: 0%;
   left: 0%;
@@ -391,7 +392,7 @@ aside {
   background-color: #495057;
 }
 
-.white {
+.aboutMe .firstElement .white {
   position: absolute;
   top: 5px;
   left: 5px;
@@ -404,7 +405,7 @@ aside {
   background-color: darkred;
 }
 
-.firstElementText {
+.aboutMe .firstElement .firstElementText {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -412,9 +413,10 @@ aside {
           transform: translate(-50%, -50%);
   width: 80%;
   font-weight: 700;
+  text-align: center;
 }
 
-.close {
+.aboutMe .firstElement .close {
   position: absolute;
   right: 0%;
   bottom: 0%;
@@ -423,13 +425,207 @@ aside {
   background-color: #495057;
 }
 
-.close2 {
+.aboutMe .firstElement .close2 {
   position: absolute;
   right: 5px;
   bottom: 5px;
   width: 40px;
   height: 40px;
   background-color: #f8f9fa;
+}
+
+.aboutMe .firstFoto {
+  position: absolute;
+  right: 11%;
+  top: 10%;
+  width: 400px;
+  height: 600px;
+  overflow: hidden;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  -webkit-box-shadow: 10px 10px 0 rgba(53, 52, 52, 0.747);
+          box-shadow: 10px 10px 0 rgba(53, 52, 52, 0.747);
+}
+
+.aboutMe .firstFoto img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.aboutMe .secondsFoto {
+  position: absolute;
+  left: 11%;
+  top: 50%;
+  width: 600px;
+  height: 400px;
+  overflow: hidden;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  -webkit-box-shadow: -10px 10px 0 rgba(53, 52, 52, 0.747);
+          box-shadow: -10px 10px 0 rgba(53, 52, 52, 0.747);
+}
+
+.aboutMe .secondsFoto img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.aboutMe .secondsElement {
+  width: 40%;
+  height: 30vh;
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  margin: 50px;
+  display: inline-block;
+}
+
+.aboutMe .secondsElement .thick {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  width: 40px;
+  height: 40px;
+  background-color: #495057;
+}
+
+.aboutMe .secondsElement .white {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 40px;
+  height: 40px;
+  border-top: 10px solid #f8f9fa;
+  border-right: 10px solid #f8f9fa;
+  border-left: 5px solid #f8f9fa;
+  border-bottom: 5px solid #f8f9fa;
+  background-color: darkred;
+}
+
+.aboutMe .secondsElement .firstElementText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 80%;
+  font-weight: 700;
+  text-align: center;
+}
+
+.aboutMe .secondsElement .close {
+  position: absolute;
+  left: 0%;
+  bottom: 0%;
+  width: 40px;
+  height: 40px;
+  background-color: #495057;
+}
+
+.aboutMe .secondsElement .close2 {
+  position: absolute;
+  left: 5px;
+  bottom: 5px;
+  width: 40px;
+  height: 40px;
+  background-color: #f8f9fa;
+}
+
+.aboutMe .thirdElement {
+  width: 40%;
+  height: 20vh;
+  position: absolute;
+  top: 82%;
+  left: 0%;
+  margin: 50px;
+  display: inline-block;
+}
+
+.aboutMe .thirdElement .thick {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 40px;
+  height: 40px;
+  background-color: #495057;
+}
+
+.aboutMe .thirdElement .white {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 40px;
+  height: 40px;
+  border-top: 10px solid #f8f9fa;
+  border-left: 10px solid #f8f9fa;
+  border-right: 5px solid #f8f9fa;
+  border-bottom: 5px solid #f8f9fa;
+  background-color: darkred;
+}
+
+.aboutMe .thirdElement .firstElementText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 80%;
+  font-weight: 700;
+  text-align: center;
+}
+
+.aboutMe .thirdElement .close {
+  position: absolute;
+  right: 0%;
+  bottom: 0%;
+  width: 40px;
+  height: 40px;
+  background-color: #495057;
+}
+
+.aboutMe .thirdElement .close2 {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  width: 40px;
+  height: 40px;
+  background-color: #f8f9fa;
+}
+
+.aboutMe .thirdFoto {
+  position: absolute;
+  right: 11%;
+  top: 80%;
+  width: 600px;
+  height: 400px;
+  overflow: hidden;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  -webkit-box-shadow: 10px 10px 0 rgba(53, 52, 52, 0.747);
+          box-shadow: 10px 10px 0 rgba(53, 52, 52, 0.747);
+}
+
+.aboutMe .thirdFoto img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 .galery {
@@ -496,17 +692,6 @@ aside {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.galery .galleryTriangle {
-  position: absolute;
-  width: 0;
-  height: 0;
-  bottom: 0;
-  right: 10%;
-  border-left: 30px solid transparent;
-  border-right: 30px solid transparent;
-  border-bottom: 30px solid #adb5bd;
 }
 
 .galery .partText {
@@ -683,9 +868,6 @@ footer .footerTriangle {
   header .option {
     display: none;
   }
-  footer {
-    font-size: 16px;
-  }
   aside {
     position: fixed;
     display: -webkit-box;
@@ -732,6 +914,11 @@ footer .footerTriangle {
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
+  .slider .arrowRight, .slider .arrowLeft {
+    width: 60px;
+    height: 140px;
+    font-size: 46px;
+  }
   .contact .contactText {
     font-size: 26px;
   }
@@ -741,8 +928,8 @@ footer .footerTriangle {
   .contact .partText span {
     height: 20px;
   }
-  .firstElement, .secondElement {
-    width: 85%;
+  .aboutMe .firstElement {
+    width: 100%;
     font-size: 16px;
   }
   .galery {
@@ -758,14 +945,25 @@ footer .footerTriangle {
         flex-basis: 20vh;
     width: 90%;
   }
+  footer {
+    font-size: 13px;
+  }
 }
 
-@media (max-width: 1226px) {
-  .firstElement, .secondElement {
+@media (max-width: 1400px) {
+  .aboutMe .secondsElement, .aboutMe .thirdElement {
+    width: 35%;
     height: 40vh;
   }
-  .secondElement {
-    bottom: 10%;
+}
+
+@media (max-width: 1240px) {
+  .aboutMe .firstElement, .aboutMe .secondsElement, .aboutMe .thirdElement {
+    height: 40vh;
+    width: 85%;
+  }
+  .aboutMe .firstFoto, .aboutMe .secondsFoto, .aboutMe .thirdFoto {
+    display: none;
   }
 }
 
