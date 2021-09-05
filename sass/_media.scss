@@ -81,6 +81,7 @@
     {
         width:100%;
         font-size:16px;
+        height:35vh;
     }
 
     .galery
@@ -129,5 +130,25 @@
     {
         height:40vh;
         transform:translateY(-40vh);
+    }
+}
+
+@media (max-width:860px)
+{
+    .aboutMe .secondsElement, .aboutMe .thirdElement,.aboutMe .firstElement
+    {
+        width:85%;
+        height:50vh;
+        font-size:14px;
+    }
+
+    .aboutMe .thirdElement
+    {
+        height:35vh;
+    }
+
+    .aboutMe .firstElement
+    {
+        height:55vh;
     }
 }

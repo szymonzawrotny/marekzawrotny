@@ -213,7 +213,7 @@ aside{
 .aboutMe
 {
     flex-basis:230vh;
-    min-height: 2000px;
+    min-height: 1800px;
     position:relative;
     background-color: $aboutMe;
     color:#495057;
@@ -306,7 +306,7 @@ aside{
     {
         position:absolute;
         left:11%;
-        top:50%;
+        top:45%;
         //border:2px solid black;
         width:600px;
         height:400px;
@@ -329,7 +329,7 @@ aside{
         width:40%;
         height:30vh;
         position:absolute;
-        top:50%;
+        top:45%;
         right:0%;
         margin:50px;
         display:inline-block;
@@ -394,7 +394,7 @@ aside{
         width:40%;
         height:20vh;
         position:absolute;
-        top:82%;
+        top:72%;
         left:0%;
         margin:50px;
         display:inline-block;
@@ -457,7 +457,7 @@ aside{
     {
         position:absolute;
         right:11%;
-        top:80%;
+        top:70%;
         width:600px;
         height:400px;
         overflow: hidden;
