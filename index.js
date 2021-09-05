@@ -14,7 +14,7 @@ toUp.addEventListener('click',()=> {
 
 window.addEventListener('scroll',()=> {
 
-    if(scrollY > foto.clientHeight/2)
+    if(scrollY > foto.clientHeight/6)
     {
         toUp.classList.add('active');
         header.classList.add('active'); //zmiana koloru headera

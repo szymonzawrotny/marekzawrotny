@@ -138,17 +138,17 @@
     .aboutMe .secondsElement, .aboutMe .thirdElement,.aboutMe .firstElement
     {
         width:85%;
-        height:50vh;
-        font-size:14px;
-    }
-
-    .aboutMe .thirdElement
-    {
-        height:35vh;
-    }
-
-    .aboutMe .firstElement
-    {
         height:55vh;
+        font-size:15px;
+    }
+
+    .secondsElement
+    {
+        left:0;
+    }
+
+    .thick, .white, .close
+    {
+        display:none;
     }
 }

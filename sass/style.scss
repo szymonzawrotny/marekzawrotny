@@ -125,7 +125,7 @@ aside{
         overflow: hidden;
         position: relative;
         img{
-            position: absolute;
+            position: fixed;
             top: 50%;
             left: 50%;
             transform: translate(-50%,-50%);
@@ -219,7 +219,6 @@ aside{
     color:#495057;
     .firstElement
     {
-        //border: 2px solid black;
         width:50%;
         height:20vh;
         position:absolute;
@@ -285,7 +284,6 @@ aside{
         position:absolute;
         right:11%;
         top:10%;
-        //border:2px solid black;
         width:400px;
         height:600px;
         overflow: hidden;
@@ -475,76 +473,77 @@ aside{
     }
 }
 
-.galery
+.gallery
 {
-    flex-basis: 90vh;
+    flex-basis: 100vh;
     min-height:800px;
     position:relative;
-    // background-color: #dee2e6;
     background-image: $gallery;
-    display:flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    .galleryFoto{
-        height:70vh;
-        flex-basis:20%;
-        margin:10px;
-        overflow: hidden;
-        cursor:pointer;
-        position: relative;
-        img{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            height: auto;
-            min-width: 100%;
-            min-height: 100%;
-        }
-        span.krajobraz,span.makro,span.przyroda,span.szczytno,span.ślub
-        {
-            position: absolute;
-            bottom:0%;
-            width:100%;
-            height:7vh;
-            background-color:black;
-            text-transform: capitalize;
-            opacity:.8;
-            transition: .3s ease-in-out;
-            transform:translateY(7vh);
-            @include makeCenter();
-        }
-    }
     .partText
     {
         top:3%;
     }
-}
-
-#firstGalleryFoto:hover span.krajobraz
-{
-    transform:translateY(0);
-}
-
-#secondGalleryFoto:hover span.makro
-{
-    transform:translateY(0);
-}
-
-#firstGalleryFoto:hover span.przyroda
-{
-    transform:translateY(0);
-}
-
-#firstGalleryFoto:hover span.szczytno
-{
-    transform:translateY(0);
-}
-
-#firstGalleryFoto:hover span.ślub
-{
-    transform:translateY(0);
+    .container{
+        width:80%;
+        height:80%;
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: space-around;
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        .galleryFoto
+        {
+            flex-basis:32%;
+            height:28vh;
+            //border:2px solid black;
+            border-radius:10px;
+            cursor: pointer;
+            overflow: hidden;
+            position: relative;
+            transition: 0.3s ease-in-out;
+            img{
+                position: absolute;
+                top:50%;
+                left:50%;
+                transform:translate(-50%,-50%);
+                height:auto;
+                min-height:100%;
+                min-width:100%;
+            }
+        }
+        .galleryFoto:nth-child(1)
+        {
+            flex-basis:36%;
+        }
+        .galleryFoto:nth-child(2)
+        {
+            flex-basis:30%;
+        }
+        .galleryFoto:nth-child(3)
+        {
+            flex-basis:30%;
+        }
+        .galleryFoto:nth-child(4)
+        {
+            flex-basis:28%;
+        }
+        .galleryFoto:nth-child(5)
+        {
+            flex-basis:28%;
+        }
+        .galleryFoto:nth-child(6)
+        {
+            flex-basis:40%;
+        }
+        .galleryFoto:hover
+        {
+            box-shadow:0px 0px 10px rgb(15, 15, 15);
+            transform: translateY(-5px);
+        }
+    }
 }
 
 .partText

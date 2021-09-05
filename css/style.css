@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @-webkit-keyframes shakeThisBaby {
   0% {
     -webkit-transform: translateX(0);
@@ -53,6 +52,7 @@
             transform: translateX(0);
   }
 }
+
 @keyframes shakeThisBaby {
   0% {
     -webkit-transform: translateX(0);
@@ -255,7 +255,7 @@ aside {
 }
 
 .slider .foto img {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -628,99 +628,96 @@ aside {
   min-height: 100%;
 }
 
-.galery {
-  -ms-flex-preferred-size: 90vh;
-      flex-basis: 90vh;
+.gallery {
+  -ms-flex-preferred-size: 100vh;
+      flex-basis: 100vh;
   min-height: 800px;
   position: relative;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#f8f9fa), color-stop(#242424), to(#adb5bd));
-  background-image: linear-gradient(#f8f9fa, #242424, #adb5bd);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f8f9fa), color-stop(#3b3b3b), to(#adb5bd));
+  background-image: linear-gradient(#f8f9fa, #3b3b3b, #adb5bd);
+}
+
+.gallery .partText {
+  top: 3%;
+}
+
+.gallery .container {
+  width: 80%;
+  height: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
-.galery .galleryFoto {
-  height: 70vh;
-  -ms-flex-preferred-size: 20%;
-      flex-basis: 20%;
-  margin: 10px;
-  overflow: hidden;
+.gallery .container .galleryFoto {
+  -ms-flex-preferred-size: 32%;
+      flex-basis: 32%;
+  height: 28vh;
+  border-radius: 10px;
   cursor: pointer;
+  overflow: hidden;
   position: relative;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
-.galery .galleryFoto img {
+.gallery .container .galleryFoto img {
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   height: auto;
-  min-width: 100%;
   min-height: 100%;
+  min-width: 100%;
 }
 
-.galery .galleryFoto span.krajobraz, .galery .galleryFoto span.makro, .galery .galleryFoto span.przyroda, .galery .galleryFoto span.szczytno, .galery .galleryFoto span.ślub {
-  position: absolute;
-  bottom: 0%;
-  width: 100%;
-  height: 7vh;
-  background-color: black;
-  text-transform: capitalize;
-  opacity: .8;
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
-  -webkit-transform: translateY(7vh);
-          transform: translateY(7vh);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.gallery .container .galleryFoto:nth-child(1) {
+  -ms-flex-preferred-size: 36%;
+      flex-basis: 36%;
 }
 
-.galery .partText {
-  top: 3%;
+.gallery .container .galleryFoto:nth-child(2) {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
 }
 
-#firstGalleryFoto:hover span.krajobraz {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+.gallery .container .galleryFoto:nth-child(3) {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
 }
 
-#secondGalleryFoto:hover span.makro {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+.gallery .container .galleryFoto:nth-child(4) {
+  -ms-flex-preferred-size: 28%;
+      flex-basis: 28%;
 }
 
-#firstGalleryFoto:hover span.przyroda {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+.gallery .container .galleryFoto:nth-child(5) {
+  -ms-flex-preferred-size: 28%;
+      flex-basis: 28%;
 }
 
-#firstGalleryFoto:hover span.szczytno {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+.gallery .container .galleryFoto:nth-child(6) {
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
 }
 
-#firstGalleryFoto:hover span.ślub {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+.gallery .container .galleryFoto:hover {
+  -webkit-box-shadow: 0px 0px 10px #0f0f0f;
+          box-shadow: 0px 0px 10px #0f0f0f;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
 }
 
 .partText {
@@ -979,14 +976,14 @@ footer .footerTriangle {
 @media (max-width: 860px) {
   .aboutMe .secondsElement, .aboutMe .thirdElement, .aboutMe .firstElement {
     width: 85%;
-    height: 50vh;
-    font-size: 14px;
-  }
-  .aboutMe .thirdElement {
-    height: 35vh;
-  }
-  .aboutMe .firstElement {
     height: 55vh;
+    font-size: 15px;
+  }
+  .secondsElement {
+    left: 0;
+  }
+  .thick, .white, .close {
+    display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */
