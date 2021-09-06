@@ -77,22 +77,12 @@
         }
     }
 
-    .aboutMe .firstElement
+    .aboutMe .firstElement,.aboutMe .secondsElement, .aboutMe .thirdElement
     {
         width:100%;
         font-size:16px;
         height:35vh;
-    }
-
-    .galery
-    {
-        flex-direction: column;
-        flex-basis:130vh;
-        .galleryFoto
-        {
-            flex-basis:20vh;
-            width:90%;
-        }
+        left:-4%;
     }
 
     footer
@@ -121,6 +111,22 @@
     .aboutMe .firstFoto, .aboutMe .secondsFoto, .aboutMe .thirdFoto
     {
         display:none;
+    }
+}
+
+@media (max-width:1024px)
+{
+    .gallery 
+    {
+        flex-basis:200vh;
+        .container{
+            flex-direction: column;
+            flex-wrap: nowrap;
+            .galleryFoto
+            {
+                flex-basis: 10vh;
+            }
+        }
     }
 }
 
