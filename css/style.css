@@ -184,7 +184,7 @@ header .option {
 }
 
 header.active {
-  background-color: #212529;
+  background-color: #222;
 }
 
 header .option ul {
@@ -286,8 +286,8 @@ aside {
 }
 
 .slider .ringBox .oneRing {
-  height: 20px;
-  width: 20px;
+  height: 10px;
+  width: 10px;
   border-radius: 50%;
   background-color: white;
   -webkit-box-shadow: 0px 0px 5px white;
@@ -309,7 +309,6 @@ aside {
           transform: translateY(-50%);
   width: 80px;
   height: 180px;
-  background-color: black;
   opacity: .4;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -320,7 +319,7 @@ aside {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 58px;
+  font-size: 66px;
   cursor: pointer;
   -webkit-transition: .2s ease-in-out;
   transition: .2s ease-in-out;
@@ -370,8 +369,8 @@ aside {
       flex-basis: 230vh;
   min-height: 1800px;
   position: relative;
-  background-color: #f8f9fa;
-  color: #495057;
+  background-color: black;
+  color: #c7c6c6;
 }
 
 .aboutMe .firstElement {
@@ -398,10 +397,10 @@ aside {
   left: 5px;
   width: 40px;
   height: 40px;
-  border-top: 10px solid #f8f9fa;
-  border-left: 10px solid #f8f9fa;
-  border-right: 5px solid #f8f9fa;
-  border-bottom: 5px solid #f8f9fa;
+  border-top: 10px solid black;
+  border-left: 10px solid black;
+  border-right: 5px solid black;
+  border-bottom: 5px solid black;
   background-color: darkred;
 }
 
@@ -431,7 +430,7 @@ aside {
   bottom: 5px;
   width: 40px;
   height: 40px;
-  background-color: #f8f9fa;
+  background-color: black;
 }
 
 .aboutMe .firstFoto {
@@ -443,8 +442,6 @@ aside {
   overflow: hidden;
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
-  -webkit-box-shadow: 10px 10px 0 rgba(53, 52, 52, 0.747);
-          box-shadow: 10px 10px 0 rgba(53, 52, 52, 0.747);
 }
 
 .aboutMe .firstFoto img {
@@ -467,8 +464,6 @@ aside {
   overflow: hidden;
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
-  -webkit-box-shadow: -10px 10px 0 rgba(53, 52, 52, 0.747);
-          box-shadow: -10px 10px 0 rgba(53, 52, 52, 0.747);
 }
 
 .aboutMe .secondsFoto img {
@@ -507,10 +502,10 @@ aside {
   right: 5px;
   width: 40px;
   height: 40px;
-  border-top: 10px solid #f8f9fa;
-  border-right: 10px solid #f8f9fa;
-  border-left: 5px solid #f8f9fa;
-  border-bottom: 5px solid #f8f9fa;
+  border-top: 10px solid black;
+  border-right: 10px solid black;
+  border-left: 5px solid black;
+  border-bottom: 5px solid black;
   background-color: darkred;
 }
 
@@ -540,7 +535,7 @@ aside {
   bottom: 5px;
   width: 40px;
   height: 40px;
-  background-color: #f8f9fa;
+  background-color: black;
 }
 
 .aboutMe .thirdElement {
@@ -568,10 +563,10 @@ aside {
   left: 5px;
   width: 40px;
   height: 40px;
-  border-top: 10px solid #f8f9fa;
-  border-left: 10px solid #f8f9fa;
-  border-right: 5px solid #f8f9fa;
-  border-bottom: 5px solid #f8f9fa;
+  border-top: 10px solid black;
+  border-left: 10px solid black;
+  border-right: 5px solid black;
+  border-bottom: 5px solid black;
   background-color: darkred;
 }
 
@@ -601,7 +596,7 @@ aside {
   bottom: 5px;
   width: 40px;
   height: 40px;
-  background-color: #f8f9fa;
+  background-color: black;
 }
 
 .aboutMe .thirdFoto {
@@ -613,8 +608,6 @@ aside {
   overflow: hidden;
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
-  -webkit-box-shadow: 10px 10px 0 rgba(53, 52, 52, 0.747);
-          box-shadow: 10px 10px 0 rgba(53, 52, 52, 0.747);
 }
 
 .aboutMe .thirdFoto img {
@@ -633,8 +626,8 @@ aside {
       flex-basis: 100vh;
   min-height: 800px;
   position: relative;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#f8f9fa), color-stop(#3b3b3b), to(#adb5bd));
-  background-image: linear-gradient(#f8f9fa, #3b3b3b, #adb5bd);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(black), color-stop(#3b3b3b), to(#adb5bd));
+  background-image: linear-gradient(black, #3b3b3b, #adb5bd);
 }
 
 .gallery .partText {
@@ -666,7 +659,6 @@ aside {
       flex-basis: 28%;
   height: 32vh;
   margin: 5px;
-  border-radius: 10px;
   cursor: pointer;
   overflow: hidden;
   position: relative;
@@ -716,8 +708,8 @@ aside {
 }
 
 .gallery .container .galleryFoto:hover {
-  -webkit-box-shadow: 0px 0px 10px #0f0f0f;
-          box-shadow: 0px 0px 10px #0f0f0f;
+  -webkit-box-shadow: 0px 0px 5px dimgray;
+          box-shadow: 0px 0px 5px dimgray;
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
 }
@@ -816,7 +808,7 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #212529;
+  background-color: #222;
   font-size: 18px;
   position: relative;
   overflow: hidden;
