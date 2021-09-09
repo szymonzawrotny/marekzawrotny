@@ -28,9 +28,9 @@
         top:0;
         left:0;
         right:0;
-        height:35vh;
+        height:250px;
         background-color:#212529;
-        transform:translateY(-35vh);
+        transform:translateY(-250px);
         transition: 0.5s ease-in-out;
         text-align:center;
         ul{
@@ -127,15 +127,6 @@
                 flex-basis: 10vh;
             }
         }
-    }
-}
-
-@media (max-height:400px)
-{
-    aside
-    {
-        height:40vh;
-        transform:translateY(-40vh);
     }
 }
 

@@ -64,3 +64,15 @@
         opacity:1;
     }
 }
+
+@keyframes moveSquare
+{
+    0%{
+        transform:translateY(0) rotate(0);
+    }
+    100%{
+        transform: translateY(-65vh) rotate(360deg);
+        border-radius:50%;
+        opacity:0;
+    }
+}
