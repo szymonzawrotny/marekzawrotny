@@ -1,3 +1,66 @@
+@media (max-width:1580px)
+{
+    .aboutMe
+    {
+        .firstElement
+        {
+            .leftSide{
+                line-height:20px;
+            }
+        }
+    }
+}
+
+@media(max-width:1200px)
+{
+    .aboutMe
+    {
+        .firstElement
+        {
+            .leftSide{
+                top:50%;
+                left:50%;
+                transform:translate(-50%,-50%);
+                width:80%;
+            }
+            .rightSide{
+                display:none;
+            }
+        }
+        .awards
+        {
+            flex-direction: column;
+            align-items: center;
+            .leftSide{
+                max-width:500px;
+                width:90%;
+            }
+            .rightSide{
+                max-width:500px;
+                width:90%;
+            }
+        }
+    }
+}
+
+@media (max-width:1024px)
+{
+    .gallery 
+    {
+        flex-basis:200vh;
+        .container{
+            flex-direction: column;
+            flex-wrap: nowrap;
+            width:90%;
+            .galleryFoto
+            {
+                flex-basis: 10vh;
+                width:100%;
+            }
+        }
+    }
+}
+
 @media (max-width:860px)
 {
     .hamburger 
@@ -29,7 +92,7 @@
         left:0;
         right:0;
         height:250px;
-        background-color:#212529;
+        background-color:#222;
         transform:translateY(-250px);
         transition: 0.5s ease-in-out;
         text-align:center;
@@ -64,88 +127,28 @@
         }
     }
 
+    .aboutMe
+    {
+        flex-basis:280vh;
+        .firstElement{
+            height:180vh;
+            .leftSide{
+                height:140vh;
+            }
+        }
+    }
+
     .contact .contactText
     {
         font-size:26px;
     }
 
-    .contact .partText
-    {
-        font-size: 32px;
-        span{
-            height:20px;
-        }
-    }
-
-    .aboutMe .firstElement,.aboutMe .secondsElement, .aboutMe .thirdElement
-    {
-        width:100%;
-        font-size:16px;
-        height:35vh;
-        left:-4%;
-    }
-
     footer
     {
         font-size:13px;
-    }
-}
-
-@media (max-width:1400px)
-{
-    .aboutMe .secondsElement, .aboutMe .thirdElement
-    {
-        width:35%;
-        height:40vh;
-    }
-}
-
-@media (max-width:1240px)
-{
-    .aboutMe .firstElement, .aboutMe .secondsElement, .aboutMe .thirdElement
-    {
-        height:40vh;
-        width:85%;
-    }
-
-    .aboutMe .firstFoto, .aboutMe .secondsFoto, .aboutMe .thirdFoto
-    {
-        display:none;
-    }
-}
-
-@media (max-width:1024px)
-{
-    .gallery 
-    {
-        flex-basis:200vh;
-        .container{
-            flex-direction: column;
-            flex-wrap: nowrap;
-            .galleryFoto
-            {
-                flex-basis: 10vh;
-            }
+        span.fcknBoss
+        {
+            font-size:10px;
         }
-    }
-}
-
-@media (max-width:860px)
-{
-    .aboutMe .secondsElement, .aboutMe .thirdElement,.aboutMe .firstElement
-    {
-        width:85%;
-        height:55vh;
-        font-size:15px;
-    }
-
-    .secondsElement
-    {
-        left:0;
-    }
-
-    .thick, .white, .close
-    {
-        display:none;
     }
 }

@@ -26,7 +26,7 @@ header
     min-height: 80px;
     flex-basis: 10vh;
     @include makeCenter();
-    background-color: transparent; // zmienia sie na transparent ( a raczej na początku jest)
+    background-color: transparent; 
     transition: 0.4s ease-in-out;
     .logo{
         position: absolute;
@@ -170,7 +170,7 @@ aside{
         transform:translateY(-50%);
         width:80px;
         height:180px;
-        opacity:.4;
+        opacity:.6;
         @include makeCenter;
         font-size:66px;
         cursor:pointer;
@@ -211,258 +211,128 @@ aside{
 
 .aboutMe
 {
-    flex-basis:230vh;
-    min-height: 1800px;
+    flex-basis:140vh;
+    min-height: 1700px;
     position:relative;
     background-color: $aboutMe;
     color:rgb(199, 198, 198);
-    .firstElement
-    {
-        width:50%;
-        height:20vh;
-        position:absolute;
-        top:20%;
-        margin:50px;
-        display:inline-block;
-        .thick
-        {
+    .firstElement{
+        position:relative;
+        width:100%;
+        height:90vh;
+        .leftSide{
             position:absolute;
-            top:0%;
-            left:0%;
-            width:40px;
-            height:40px;
-            background-color:#495057;
+            top:20%;
+            left:5%;
+            width:50%;
+            height:65vh;
+            text-align: justify;
+            letter-spacing: 1px;
+            line-height:25px;
+            p{
+                margin:5px;
+                padding:5px;
+            }
+            .sectionHeader{
+                position:absolute;
+                left:50%;
+                transform:translate(-50%,-100%);
+                min-width:20%;
+                height:6vh;
+                //border:2px solid white;
+                @include makeCenter();
+                text-transform: capitalize;
+                font-size:42px;
+                span{
+                    position: absolute;
+                    top:0;
+                    left:0;
+                    width:80px;
+                    height:40px;
+                    background-color: darkred;
+                    z-index:-1;
+                }
+            }
         }
-        .white
+        .rightSide
         {
             position:absolute;
-            top:5px;
-            left:5px;
-            width:40px;
-            height:40px;
-            border-top:10px solid black;
-            border-left:10px solid black;
-            border-right:5px solid black;
-            border-bottom:5px solid black;
-            background-color: darkred;
-        }
-
-        .firstElementText
-        {
-            position:absolute;
-            top:50%;
-            left:50%;
-            transform:translate(-50%,-50%);
-            width:80%;
-            font-weight:700;
-            text-align: center;
-        }
-
-        .close
-        {
-            position:absolute;
-            right:0%;
-            bottom:0%;
-            width:40px;
-            height:40px;
-            background-color:#495057;
-        }
-
-        .close2
-        {
-            position:absolute;
-            right:5px;
-            bottom:5px;
-            width:40px;
-            height:40px;
-            background-color: black;
+            top:5%;
+            right:10%;
+            width:30%;
+            height:80vh;
+            overflow: hidden;
+            img{
+                position:absolute;
+                top:50%;
+                left:50%;
+                transform: translate(-50%,-50%);
+                min-width: 100%;
+                min-height:100%;
+            }
         }
     }
-    .firstFoto
-    {
-        position:absolute;
-        right:11%;
-        top:10%;
-        width:400px;
-        height:600px;
-        overflow: hidden;
-        transition: 0.5s ease-in-out;
-        img{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            height: auto;
-            min-width: 100%;
-            min-height: 100%;
+    .awards{
+        position:relative;
+        width:100%;
+        height:80vh;
+        display:flex;
+        justify-content: center;
+        .leftSide{
+            position:relative;
+            width:30%;
+            height:40vh;
+            overflow: hidden;
+            margin:50px;
+            img{
+                position:absolute;
+                top:50%;
+                left:50%;
+                transform: translate(-50%,-50%);
+                min-width: 100%;
+                min-height:100%;
+            }
         }
-    }
-
-    .secondsFoto
-    {
-        position:absolute;
-        left:11%;
-        top:45%;
-        width:600px;
-        height:400px;
-        overflow: hidden;
-        transition: 0.5s ease-in-out;
-        img{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            height: auto;
-            min-width: 100%;
-            min-height: 100%;
+        // .leftSideDescribe
+        // {
+        //     position:absolute;
+        //     bottom:15%;
+        //     left:15%;
+        //     width:30%;
+        //     height:10%;
+        //     p{
+        //         text-align: justify;
+        //         letter-spacing: 1px;
+        //         line-height:25px;
+        //     }
+        // }
+        .rightSide{
+            position:relative;
+            width:30%;
+            height:40vh;
+            overflow: hidden;
+            margin:50px;
+            img{
+                position:absolute;
+                top:50%;
+                left:50%;
+                transform: translate(-50%,-50%);
+                min-width: 100%;
+                min-height:100%;
+            }
         }
-    }
-
-    .secondsElement
-    {
-        width:40%;
-        height:30vh;
-        position:absolute;
-        top:45%;
-        right:0%;
-        margin:50px;
-        display:inline-block;
-        .thick
-        {
-            position:absolute;
-            top:0%;
-            right:0%;
-            width:40px;
-            height:40px;
-            background-color:#495057;
-        }
-        .white
-        {
-            position:absolute;
-            top:5px;
-            right:5px;
-            width:40px;
-            height:40px;
-            border-top:10px solid black;
-            border-right:10px solid black;
-            border-left:5px solid black;
-            border-bottom:5px solid black;
-            background-color: darkred;
-        }
-
-        .firstElementText
-        {
-            position:absolute;
-            top:50%;
-            left:50%;
-            transform:translate(-50%,-50%);
-            width:80%;
-            font-weight:700;
-            text-align: center;
-        }
-
-        .close
-        {
-            position:absolute;
-            left:0%;
-            bottom:0%;
-            width:40px;
-            height:40px;
-            background-color:#495057;
-        }
-
-        .close2
-        {
-            position:absolute;
-            left:5px;
-            bottom:5px;
-            width:40px;
-            height:40px;
-            background-color: black;
-        }
-    }
-
-    .thirdElement
-    {
-        width:40%;
-        height:20vh;
-        position:absolute;
-        top:72%;
-        left:0%;
-        margin:50px;
-        display:inline-block;
-        .thick
-        {
-            position:absolute;
-            top:0%;
-            left:0%;
-            width:40px;
-            height:40px;
-            background-color:#495057;
-        }
-        .white
-        {
-            position:absolute;
-            top:5px;
-            left:5px;
-            width:40px;
-            height:40px;
-            border-top:10px solid black;
-            border-left:10px solid black;
-            border-right:5px solid black;
-            border-bottom:5px solid black;
-            background-color: darkred;
-        }
-
-        .firstElementText
-        {
-            position:absolute;
-            top:50%;
-            left:50%;
-            transform:translate(-50%,-50%);
-            width:80%;
-            font-weight:700;
-            text-align: center;
-        }
-
-        .close
-        {
-            position:absolute;
-            right:0%;
-            bottom:0%;
-            width:40px;
-            height:40px;
-            background-color:#495057;
-        }
-
-        .close2
-        {
-            position:absolute;
-            right:5px;
-            bottom:5px;
-            width:40px;
-            height:40px;
-            background-color: black;
-        }
-    }
-    .thirdFoto
-    {
-        position:absolute;
-        right:11%;
-        top:70%;
-        width:600px;
-        height:400px;
-        overflow: hidden;
-        transition: 0.5s ease-in-out;
-        img{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            height: auto;
-            min-width: 100%;
-            min-height: 100%;
-        }
+        // .rightSideDescribe{
+        //     position:absolute;
+        //     bottom:15%;
+        //     right:15%;
+        //     width:30%;
+        //     height:10%;
+        //     p{
+        //         text-align: justify;
+        //         letter-spacing: 1px;
+        //         line-height:25px;
+        //     }
+        // }
     }
 }
 
@@ -472,10 +342,27 @@ aside{
     min-height:800px;
     position:relative;
     background-image: $gallery;
-    .partText
-    {
-        top:3%;
+    .sectionHeader{
+        position:absolute;
+        left:50%;
+        top:5%;
+        transform:translateX(-50%);
+        min-width:8%;
+        height:6vh;
+        @include makeCenter();
+        text-transform: capitalize;
+        font-size:42px;
+        span{
+            position: absolute;
+            top:0;
+            left:0;
+            width:80px;
+            height:40px;
+            background-color: darkred;
+            z-index:-1;
+        }
     }
+
     .container{
         width:80%;
         height:80%;
@@ -538,26 +425,6 @@ aside{
     }
 }
 
-.partText
-{
-    font-size:36px;
-    font-weight:700;
-    text-transform: capitalize;
-    position:absolute;
-    top:5%;
-    left:50%;
-    transform: translateX(-50%);
-}
-
-.partText span
-{
-    display:inline-block;
-    width:10px;
-    height:25px;
-    margin:0 4px;
-    background-color: $partTextSpan;
-}
-
 .contact
 {
     display:flex;
@@ -567,43 +434,101 @@ aside{
     flex-basis: 60vh;
     min-height:400px;
     background-color: $contact;
-    .partText
-    {
-        font-size: 46px;
-        span{
-            height:30px;
-        }
-    }
     .contactText
     {
-        width:100%;
         position:absolute;
-        top:50%;
-        left:50%;
-        transform: translate(-50%,-50%);
-        text-align:center;
+        left:10%;
+        top:10%;
+        width:35%;
+        height:40vh;
         font-size:36px;
         font-weight: 700;
+        .sectionHeader{
+            position:absolute;
+            left:5%;
+            transform:translateY(-100%);
+            min-width:20%;
+            height:6vh;
+            @include makeCenter();
+            text-transform: capitalize;
+            font-size:42px;
+            span{
+                position: absolute;
+                top:0;
+                left:0;
+                width:80px;
+                height:40px;
+                background-color: darkred;
+                z-index:-1;
+            }
+        }
         span{
             color:#495057;
         }
-        button{
-            height:60px;
-            width:140px;
-            margin:40px;
-            cursor: pointer;
-            background-color: white;
-            border: 4px solid #495057;
-            text-transform: uppercase;
-            color:#495057;
-            font-weight:700;
-            font-size:22px;
-            animation: shakeThisBaby 10s ease-in-out infinite;
+    }
+    .contactPanel
+    {
+        position: absolute;
+        top:10%;
+        right:10%;
+        width:40%;
+        height:40vh;
+        background-color:#222;
+        box-shadow: 15px 15px 0 white;
+        transition:.5s ease-in-out;
+        z-index:15;
+        input{
+            position:relative;
+            left:50%;
+            transform: translateX(-50%);
+            margin:30px 0;
+            width:80%;
+            height:30px;
+            font-size:14px;
+            letter-spacing: 1px;
+            border:0;
+            border-bottom: 4px solid black;
         }
-        button:hover
+
+        textarea
         {
-            animation-play-state: paused;
-        }        
+            position:relative;
+            left:50%;
+            transform: translateX(-50%);
+            min-height:50%;
+            min-width:80%;
+            max-width:90%;
+            max-height:50%;
+            font-size:16px;
+            letter-spacing: 1px;
+            border:0;
+            border-bottom: 4px solid black;
+        }
+
+        button
+        {
+            position: absolute;
+            left:50%;
+            bottom:10%;
+            transform:translateX(-50%);
+            width:100px;
+            height:50px;
+            border:4px solid black;
+            background-color: white;
+            text-transform: uppercase;
+            font-weight: 900;
+            cursor:pointer;
+        }
+
+        input:focus, textarea:focus
+        {
+            outline:none;
+        }
+    }
+    .contactPanel:hover
+    {
+        transform:translate(15px,15px);
+        box-shadow: 0px 0px 0 white;
     }
     .square
     {
@@ -637,6 +562,16 @@ aside{
         left:85%;
         animation: moveSquare 10s 1s ease-in-out infinite;
     }
+    .square:nth-child(7)
+    {
+        left:15%;
+        animation: moveSquare 10s 5s ease-in-out infinite;
+    }
+    .square:nth-child(8)
+    {
+        left:55%;
+        animation: moveSquare 10s 4s ease-in-out infinite;
+    }
 }
 
 footer
@@ -647,6 +582,7 @@ footer
     flex-direction: column;
     background-color: $footer;
     font-size:18px;
+    text-transform: capitalize;
     position:relative;
     overflow:hidden;
     span{
@@ -676,7 +612,17 @@ footer
 
     span.name
     {
-        font-size:22px;
+        font-size:24px;
+    }
+
+    span.fcknBoss
+    {
+        font-size:14px;
+    }
+
+    span a
+    {
+        color:white;
     }
 }
 
